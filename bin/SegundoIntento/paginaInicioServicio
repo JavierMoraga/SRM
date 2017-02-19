@@ -1,0 +1,12 @@
+<html>
+<head>
+<title>Lista de servicios ofrecidos</title>
+</head>
+<body>
+<h1><strong>Lista de servicios ofrecidos</strong></h1>
+<ul>
+<li><a href=${url}/contacts>CONTACTS</a></li>
+<li><a href=${url}/smarthome>SMARTHOME</a></li>
+</ul>
+</body>
+</html>

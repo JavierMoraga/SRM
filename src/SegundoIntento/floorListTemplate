@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Lista de espacios con dispositivos</title>
+</head>
+<body>
+<h1><strong>Lista de espacios con dispositivos</strong></h1>
+<table style="border-color: #000000;" border="yes">
+	<tbody>
+		<#list app as field>
+			<tr>
+			<td><a href=${urlAnterior}/smarthome/${field}> ${field} </a></td>
+			</tr>
+		</#list>	
+	</tbody>	
+</table>	
+<p><a href= ${urlAnterior}>Volver atrás</a></p>
+</body>
+</html>

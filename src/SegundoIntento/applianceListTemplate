@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Dispositivos domésticos situados en ${floor}</title>
+</head>
+<body>
+<h1><strong>Dispositivos domésticos situados en ${floor}</strong></h1>
+<table style="border-color: #000000;" border="yes">
+	<tbody>
+		<tr>
+		<td>Aparato</td>
+		<td>Estado</td>
+		<td>Cambia estado</td>
+		</tr>
+		<#list app as field>
+			<tr>
+			<td><a href=${urlAnterior}/${floor}/${field.getUniqueID()}>${field.getUniqueID()} </a><br /></td>
+			<td>${field.getStatus()}</td>
+			<td><button>ON/OFF</button></td>
+			</tr>
+		</#list>	
+	</tbody>	
+</table>	
+<p><a href= ${urlAnterior}>Volver atrás</a></p>
+</body>
+</html>

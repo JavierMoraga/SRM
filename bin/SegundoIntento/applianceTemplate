@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Dispositivo doméstico</title>
+</head>
+<body>
+<h1><strong>Dispositivo doméstico</strong></h1>
+<form method="post" action=${urlAnterior}/${app.getUniqueID()}>
+<table style="border-color: #000000;" border="yes">
+	<tbody>
+		<tr>
+			<td><strong>Identificador único</strong></td>
+			<td>${app.uniqueID}</td>
+		</tr>
+
+		<tr>
+			<td><strong>Tipo</strong></td>
+			<td><input type="text" name="Type" value=${app.type}></td>
+		</tr>
+		
+		<tr>
+			<td><strong>Estado[0=apagado/cerrado;1=encendido/abierto]</strong></td>
+			<td><input type="number" min="0" max="1" name="Estado" value=${app.status}></td>
+		</tr>
+		
+		<tr>
+			<td><strong>Rango (para configurar valores continuos, por ejemplo potencia de luz)</strong></td>
+			<td><input type="number" step="any" min="0" max="10" name="Rango" value=${app.range}></td>
+		</tr>
+		
+	</tbody>
+</table>
+<input type="Submit" value="Actualizar aparato">
+</form>
+<p>Al pulsar actualizar, se realiza un POST que actualizará el recurso REST.</p>
+<p>URL del recurso: ${urlAnterior}/${app.getUniqueID()}</p>
+
+<p><a href= ${urlAnterior}>Volver atrás</a></p>
+</body>
+</html>

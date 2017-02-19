@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Contacto</title>
+</head>
+<body>
+<h1><strong>Contacto</strong></h1>
+
+<form method="post" action=${urlAnterior}/${app.getUniqueID()}>
+<table style="border-color: #000000;" border="yes">
+	<tbody>	
+  		<tr>
+	  		<td><strong>Nombre:</strong></td>
+	  		<td><input type="text" name="Nombre" value=${app.getFirstName()}></td>
+  		</tr>
+  		
+  		<tr>
+	  		<td><strong>Apellidos:</strong></td>
+	  		<td><input type="text" name="Apellidos" value=${app.getLastName()}></td>
+  		</tr>
+  		
+  		<tr>
+	  		<td><strong>Calle 1:</strong></td>
+	  		<td><input type="text" name="Calle 1" value=${app.getHomeAddress().getLine1()}></td>
+  		</tr>
+  		
+  		<tr>
+	  		<td><strong>Calle 2:</strong></td>
+	  		<td><input type="text" name="Calle 2" value=${app.getHomeAddress().getLine2()}></td>
+  		</tr>
+  		
+  		<tr>
+	  		<td><strong>Código Postal:</strong></td>
+	  		<td><input type="text" name="Codigo Postal" value=${app.getHomeAddress().getZipCode()}></td>
+  		</tr>
+  		
+  		<tr>
+	  		<td><strong>Ciudad:</strong></td>
+	  		<td><input type="text" name="Ciudad" value=${app.getHomeAddress().getCity()}></td>
+  		</tr>
+  		
+  		<tr>
+	  		<td><strong>País:</strong></td>
+	  		<td><input type="text" name="Pais" value=${app.getHomeAddress().getCountry()}></td>
+  		</tr>
+  		
+  		<tr>
+	  		<td><strong>Edad:</strong></td>
+	  		<td><input type="text" name="Edad" value=${app.getAge()}></td>
+  		</tr>
+  		
+  		<tr>
+	  		<td><strong>Identificador:</strong></td>
+	  		<td>${app.getUniqueID()}</td>
+  		</tr>
+  			
+  	</tbody>
+</table>
+<input type="Submit" value="Actualizar contacto">
+</form> 
+
+<p>Al pulsar actualizar, se realiza un POST que actualizará el recurso REST.</p>
+<p>URL del recurso: ${urlAnterior}/${app.getUniqueID()}</p>
+<p><a href= ${urlAnterior}>Volver atrás</a></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Lista de contactos</title>
+</head>
+<body>
+<h1><strong>Lista de contactos</strong></h1>
+<table style="border-color: #000000;" border="yes">
+	<tbody>
+		<tr>
+		<td><strong>Nombre</strong></td>
+		<td><strong>Apellidos</strong></td>
+		<td><strong>Identificador</strong></td>
+		</tr>
+		<#list app as field>
+			<tr>
+			<td>${field.getFirstName()}</td>
+			<td>${field.getLastName()}</td>
+			<td><a href=${urlAnterior}/contacts/${field.getUniqueID()}>${field.getUniqueID()} </a><br /></td>
+			</tr>
+		</#list>
+	</tbody>	
+</table>	
+<p><a href= ${urlAnterior}>Volver atrás</a></p>
+</body>
+</html>
